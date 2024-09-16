@@ -5,7 +5,7 @@ class CardModel {
   final String description;
   final String category;
   final String image;
-  final Rating rating;
+  final Rating? rating;
 
   CardModel({
     required this.id,
@@ -31,8 +31,8 @@ class CardModel {
 }
 
 class Rating {
-  final double rate;
-  final int count;
+  final double? rate;
+  final int? count;
 
   Rating({
     required this.rate,

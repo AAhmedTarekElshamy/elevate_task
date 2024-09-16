@@ -135,15 +135,15 @@ class _ProductCardState extends State<ProductCard> {
           const SizedBox(height: 2),
           // Rating and review
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 3.4),
-            child: Expanded(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+
               child: Row(
                 children: [
                   Text(
-                    'Review (${widget.cardModel.rating})' ?? '4.8',
-                    style: TextStyle(fontSize: 10, color: Colors.grey[700]),
+                    'Review (${widget.cardModel.rating?.rate ?? 4.8 })'  ,
+                    style: TextStyle(fontSize: 18, color: Colors.grey[800]),
                   ),
-                  const Icon(Icons.star, color: Colors.amber, size: 12),
+                  const Icon(Icons.star, color: Colors.amber, size: 18 ),
                   const Spacer(),
                   // Add to cart button
                   Container(
@@ -169,7 +169,7 @@ class _ProductCardState extends State<ProductCard> {
                   ),
                 ],
               ),
-            ),
+
           ),
         ],
       ),
